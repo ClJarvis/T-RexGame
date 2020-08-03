@@ -5,3 +5,13 @@
 	background-color: green;
 	bottom: 0px;
 }
+
+
+.obstacle {
+	position: absolute;
+	width: 60px;
+	height: 60px;
+	background-color: blue;
+	bottom: 0px; 
+	border-radius: 60px;
+}
