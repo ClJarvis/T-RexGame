@@ -2,7 +2,7 @@
 	position: absolute;
 	width: 60px;
 	height: 60px;
-	background-color: green;
+	background-image: url(t-rex.png);
 	bottom: 0px;
 }
 
@@ -11,7 +11,27 @@
 	position: absolute;
 	width: 60px;
 	height: 60px;
-	background-color: blue;
+	background-color: black;
 	bottom: 0px; 
 	border-radius: 60px;
+}
+
+
+
+@keyframes slideright {
+  from {
+      background-position: 70000%;
+  }
+  to {
+      background-position: 0%;
+  }
+}
+
+@-webkit-keyframes slideright {
+  from {
+      background-position: 70000%;
+  }
+  to {
+      background-position: 0%;
+  }
 }
