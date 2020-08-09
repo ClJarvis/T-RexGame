@@ -2,10 +2,34 @@ document.addEventListener('DOMContentLoaded', () => {
 const dino = document.querySelector('.dino')
 const grid = document.querySelector('.grid')
 const alert = document.getElementById('alert')
+const numOfStars = 100;
+
 
 let isJumping = false 
 let gravity = 0.9
 let isGameOver = false
+
+
+// Populate the star field
+for (let i = 0; i < numOfStars; i++) {
+  let star = document.createElement("div");
+    star.className = "star";
+    var xy = getRandomPosition();
+     star.style.top = xy[0] +'px';
+     star.style.left = xy[1] + 'px';
+    document.body.append(star);
+}
+
+
+function getRandomPosition() {
+  var y = window.innerWidth;
+  var x = window.innerHeight;
+    var randomX = Math.floor(Math.random()*x);
+    var randomY = Math.floor(Math.random()*y);
+    return [randomX,randomY];
+}
+
+
 
 function control(e){
  	if (e.keyCode === 32){
@@ -13,14 +37,14 @@ function control(e){
  		 	isJumping = true
  		 	jump()
  		 }
- 		console.log('pressed')
+ 		//console.log('pressed')
  		//code
 
  		}
 	}
 document.addEventListener('keyup', control)
 
-let position = 0
+let position = 60
 function jump() {
 	let count   = 0
 	let timerId = setInterval(function () {
@@ -43,12 +67,12 @@ function jump() {
 		}
 
 		//move up
-		console.log('up')
+		//console.log('up')
 		count++
 		position +=30
 		position  = position * gravity
 		dino.style.bottom = position + 'px'
-		console.log(dino.style.bottom )
+		//console.log(dino.style.bottom )
 	},20)
 } 
 
@@ -69,8 +93,6 @@ function generateObstacles() {
 			//	grid.removeChild(grid.lastChild)
 			//}
 		}
-
-
 		obstaclePosition -=10
 		obstacle.style.left = obstaclePosition + 'px'
 	}, 20)
@@ -79,51 +101,8 @@ function generateObstacles() {
 }
 	generateObstacles()
 
-
 })
 
 
-// Populate the star field
-const numOfStars = 100;
-
-//
-for (let i = 0; i < numOfStars; i++) {
-  let star = document.createElement("div");
-    star.className = "star";
-    var xy = getRandomPosition();
-      star.style.top = xy[0] +'px';
-      star.style.left = xy[1] + 'px';
-    document.body.append(star);
-}
-
-const numOfStarsFade = 100;
-
-//
-for (let i = 0; i < numOfStarsFade; i++) {
-  let star = document.createElement("div");
-    star.className = "star2";
-    var xy = getRandomPosition();
-      star.style.top = xy[0] +'px';
-      star.style.left = xy[1] + 'px';
-    document.body.append(star);
-}
 
 
-
-function getRandomPosition() {
-  var y = window.innerWidth;
-  var x = window.innerHeight;
-    var randomX = Math.floor(Math.random()*x);
-    var randomY = Math.floor(Math.random()*y);
-    return [randomX,randomY];
-}
-var myVar;
-
-function myFunction() {
-    myVar = setTimeout(showPage, 5000);
-}
-
-function showPage() {
-  document.getElementById("bouncing-loader").style.display = "none";
-  document.getElementById("myDiv").style.display = "block";
-}

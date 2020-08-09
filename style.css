@@ -1,11 +1,19 @@
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background-color: white;
+  border-radius: 80%;
+}
+
 .dino {
 	position: absolute;
 	width: 60px;
 	height: 60px;
 	background-image: url(wrocket.png);
-	bottom: 2px;
+	bottom: 60px;
 	transform: rotate(40deg);
-	margin-left: 20px;
+	margin-left: 30px;
 }
 
 
@@ -14,15 +22,16 @@
 	width: 60px;
 	height: 60px;
 	background-image: url(asteroid.png);
-	bottom: 2px;        
+	bottom: 60px;        
 /*	border-radius: 60px; */
 }
 
 #lunarSurface {
   position: absolute;
-  bottom: 0px;
+  bottom: 60px;
  /* background-image: url('t-rex-background.png'); */
-  background-image: linear-gradient(to right, rgb(43 141 144 / 66%), rgb(197 66 66 / 79%));
+ /* background-image: linear-gradient(to right, rgb(43 141 144 / 66%), rgb(197 66 66 / 79%)); */
+ background-color: black;
   background-repeat: repeat-x;
   animation: slideright 600s infinite linear;
   -webkit-animation: slideright 600s infinite linear;
@@ -31,21 +40,15 @@
   margin-left: -10px;
 }
 
-#al ert {
+#alert {
   padding: 20px;
-  background-color: #f44336; 
+ /* background-color: #f44336; */
   color: white;
   margin-bottom: 15px;
 }
 
-.star, .star2 {
-  position: absolute;
-  width: 2px;
-  height: 2px;
-  background-color: white;
-  border-radius: 80%;
-}
 
+/* Used if want a background image it will cause image to scroll */
 
 @keyframes slideright {
   from {
