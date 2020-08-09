@@ -1,3 +1,6 @@
-# T-RexGame
+# T-Rex Game
 
-Recreation og the scrolling T-Rex game using JavaScript and CSS
+Recreation of the scrolling T-Rex game using JavaScript and CSS
+
+
+rocket images from here https://www.pngguru.com/search?png=+rocket
