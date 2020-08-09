@@ -40,7 +40,7 @@ function control(e){
  		//console.log('pressed')
  		//code
 
- 		}
+ 		 }
 	}
 document.addEventListener('keyup', control)
 
@@ -52,7 +52,7 @@ function jump() {
 		//move down 
 		if (count === 15) {
 			clearInterval(timerId)
-			console.log('down')
+			//console.log('down')
 			let downTimerId = setInterval(function () {
 				 if (count === 0) {
 				 	 clearInterval(downTimerId)
@@ -68,9 +68,9 @@ function jump() {
 
 		//move up
 		//console.log('up')
+		position +=60
 		count++
-		position +=30
-		position  = position * gravity
+		position = position * gravity
 		dino.style.bottom = position + 'px'
 		//console.log(dino.style.bottom )
 	},20)
@@ -85,7 +85,7 @@ function generateObstacles() {
 	obstacle.style.left = obstaclePosition + 'px'
 
 	let timerId = setInterval(function() {
-		if (obstaclePosition > 0 && obstaclePosition < 60 && position < 60) {
+		if (obstaclePosition > 60 && obstaclePosition < 120 && position < 120) {
 			alert.innerHTML = 'Game Over!'
 			isGameOver = true
 			//remove child divs \
