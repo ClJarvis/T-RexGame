@@ -86,7 +86,7 @@ function generateObstacles() {
 
 	let timerId = setInterval(function() {
 		if (obstaclePosition > 60 && obstaclePosition < 120 && position < 120) {
-			alert.innerHTML = 'Game Over!'
+			alert.innerHTML = 'Game Over <p><input type="submit" value="Play again" class="btn btn-primary btn-large btn-block" id="submit" onclick="location.reload();">'
 			isGameOver = true
 			//remove child divs \
 			//while (grid.firstChild){
