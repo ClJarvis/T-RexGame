@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => { 
-const dino = document.querySelector('.dino')
+const rocket = document.querySelector('.rocket')
 const grid = document.querySelector('.grid')
 const alert = document.getElementById('alert')
 const numOfStars = 100;
@@ -61,7 +61,7 @@ function jump() {
 				position -= 5
 				count --
 				position = position * gravity
-				dino.style.bottom = position + 'px'
+				rocket.style.bottom = position + 'px'
 			},20)
 			
 		}
@@ -71,8 +71,8 @@ function jump() {
 		position +=60
 		count++
 		position = position * gravity
-		dino.style.bottom = position + 'px'
-		//console.log(dino.style.bottom )
+		rocket.style.bottom = position + 'px'
+		//console.log(rocket.style.bottom )
 	},20)
 } 
 
