@@ -21,6 +21,15 @@ body {
 	margin-left: 30px;
 }
 
+.Insrocket {
+	position: absolute;
+	width: 60px;
+	height: 60px;
+	bottom: 0px;
+	transform: rotate(40deg);
+	margin-left: 30px;
+}
+
 
 .obstacle {
 	position: absolute;
@@ -28,7 +37,15 @@ body {
 	height: 60px;
 	background-image: url(asteroid.png);
 	bottom: 60px;        
-/*	border-radius: 60px; */
+}
+
+.Insobstacle {
+	position: absolute;
+	width: 60px;
+	height: 60px;
+	background-image: url(asteroid.png);
+	bottom: 0px; 
+	left: 240px;       
 }
 
 #lunarSurface {
@@ -60,6 +77,14 @@ body {
   z-index: 10;
   position: sticky;
   border-bottom: 2px solid white;
+}
+
+.instructions {
+	border: 4px solid white;
+	border-radius: 6%;
+	padding: 10px;
+	margin-left: 4px;
+	width: 40%;	
 }
 
 .footer {
