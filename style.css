@@ -33,7 +33,7 @@ body {
 
 .obstacle {
 	position: absolute;
-	width: 60px;
+	width: 80px;
 	height: 60px;
 	background-image: url(asteroid.png);
 	bottom: 60px;        
@@ -85,6 +85,12 @@ body {
 	padding: 10px;
 	margin-left: 4px;
 	width: 40%;	
+}
+
+.infobox {
+	width: auto;
+	height: 64px;
+
 }
 
 .footer {

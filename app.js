@@ -8,6 +8,8 @@ const numOfStars = 100;
 let isJumping = false 
 let gravity = 0.9
 let isGameOver = false
+let score = 0
+let highscore = 0
 
 
 // Populate the star field
@@ -104,5 +106,22 @@ function generateObstacles() {
 })
 
 
+/* theory A if obstacle reaches left add to score ????? 
+simlar to py pong game
+
+
+
+
+
+/* theory B  scoreText = new Text("Score: " + score, 25, 25, "left", "#212121", "20");
+  highscoreText = new Text("Highscore: " + highscore, canvas.width - 25, 25, "right", "#212121", "20");
+
+
+score++
+scoreText.t = "Score: " + score
+scoreText.Draw()
+
+let star = document.createElement("div");
+    star.className = "star";   */
 
 
