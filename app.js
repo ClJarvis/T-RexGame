@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
 const rocket = document.querySelector('.rocket')
 const grid = document.querySelector('.grid')
 const alert = document.getElementById('alert')
+
 const numOfStars = 100;
 
 
@@ -90,14 +91,20 @@ function generateObstacles() {
 		if (obstaclePosition > 60 && obstaclePosition < 120 && position < 120) {
 			alert.innerHTML = 'Game Over <p><input type="submit" value="Play again" class="btn btn-primary btn-large btn-block" id="submit" onclick="location.reload();">'
 			isGameOver = true
-			//remove child divs \
-			//while (grid.firstChild){
-			//	grid.removeChild(grid.lastChild)
-			//}
+			//remove child divs 
+			while (grid.firstChild){
+				grid.removeChild(grid.lastChild)
+			}
 		}
 		obstaclePosition -=10
 		obstacle.style.left = obstaclePosition + 'px'
+
 	}, 20)
+		if (obstaclePosition > 60)
+			score = score +100
+			document.getElementById("score").innerHTML = score
+			console.log(score)
+
 	if (!isGameOver) setTimeout(generateObstacles, randomTime)
 
 }

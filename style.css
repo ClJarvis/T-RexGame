@@ -62,6 +62,10 @@ body {
   margin-left: -10px;
 }
 
+.scoreLabel {
+  margin-left: 30px;
+}
+
 #alert {
   padding: 200px 0px 20px 0px;
  /* background-color: #f44336; */
