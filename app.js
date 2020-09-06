@@ -106,7 +106,13 @@ function generateObstacles() {
 	if (obstaclePosition > 60 && position < 60)
 		score = score +100
 		document.getElementById("score").innerHTML = score
-		console.log(score)
+	/* compare current score  to highscore save highscore  	*/	
+	if (localStorage.getItem('highscore')) {
+    	highscore = localStorage.getItem('highscore');
+  }
+
+	if (highscore >= score)
+		document.getElementById("highscore").innerHTML = highscore
 
 }
 	generateObstacles()
