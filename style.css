@@ -95,11 +95,6 @@ body {
 	width: 40%;	
 }
 
-.infobox {
-	width: auto;
-	height: 64px;
-
-}
 
 .footer {
 background: #333;
@@ -109,6 +104,13 @@ height: 55px;
 width:100%;
 bottom:0px;
 border-top: 2px solid white;
+padding-top: 20px;
+padding-left: 4px;
+}
+
+.infobox {
+  width: auto;
+  height: 64px;
 }
 
 /* Used if want a background image it will cause image to scroll */
