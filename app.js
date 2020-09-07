@@ -9,9 +9,11 @@ const numOfStars = 100;
 let isJumping = false 
 let gravity = 0.9
 let isGameOver = false
-let score = 0
+let score = .000
 let highscore = 0
-
+if (localStorage.getItem('highscore')) {
+   	highscore = localStorage.getItem('highscore');
+}
 
 // Populate the star field
 for (let i = 0; i < numOfStars; i++) {
@@ -91,6 +93,7 @@ function generateObstacles() {
 		if (obstaclePosition > 0 && obstaclePosition < 60 && position < 120) {
 			alert.innerHTML = 'Game Over <p><input type="submit" value="Play again" class="btn btn-primary btn-large btn-block" id="submit" onclick="location.reload();">'
 			isGameOver = true
+			window.localStorage.setItem('highscore', highscore)
 			//remove child divs 
 			while (grid.firstChild){
 				grid.removeChild(grid.lastChild)
@@ -106,15 +109,21 @@ function generateObstacles() {
 	if (obstaclePosition > 60 && position < 60)
 		score = score +100
 		document.getElementById("score").innerHTML = score
-	/* compare current score  to highscore save highscore  	*/	
-	if (localStorage.getItem('highscore')) {
-    	highscore = localStorage.getItem('highscore');
-  }
+	/* delete obstacle if it exits screen 
+	if (obstaclePosition > 0){
+			obstacle.splice(i, 1)
+	} */
 
-	if (highscore >= score)
+
+	/* compare current score  to highscore save highscore  	*/	
+
+  
+
+	if (score > highscore)
+		highscore = score
 		document.getElementById("highscore").innerHTML = highscore
 
-}
+	}
 	generateObstacles()
 
 })
